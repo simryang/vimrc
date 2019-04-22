@@ -58,3 +58,5 @@ set stl+=0x%B\(%b\) "현재 커서 위치 문자 ascii 코드값 16진수(10진�
 set tags+=$TILERA_ROOT/tags
 "set tags+=/opt/tilera/TileraMDE-4.3.4.193953/tilegx/tags
 set tags+=tags
+" clear last searched pattern with <F8> key
+map <F8> :let @/ = "" <CR>
