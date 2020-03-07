@@ -61,3 +61,10 @@ set tags+=tags
 syntax on "문법 강조
 " clear last searched pattern with <F8> key
 map <F8> :let @/ = "" <CR>
+" remember last position
+if has("autocmd")
+  au BufReadPost *
+  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \   exe "normal g'\"" |
+  \ endif
+endif
